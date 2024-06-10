@@ -18,11 +18,24 @@
 # Предоставь доступ к необходимым атрибутам через методы (например, get и set методы).
 
 class User:
-    def __init__(self):
-        self.id = ""
-        self.name = ""
-        self.prm_deg = ""
+    def __init__(self, id, name, prm_deg = "user"):
+        self.__id = id
+        self.__name = name
+        self.__prm_deg = prm_deg
+
+    def print_name(self):
+        print(self.__name)
+
 
 class Admin(User):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, id, name, prm_deg = "admin"):
+        super().__init__(id, name, prm_deg)
+
+
+user1 = User(111, "Nik")
+admin1 = Admin(112, "Den")
+
+user1.print_name()
+admin1.print_name()
+
+print(admin1.__name)
