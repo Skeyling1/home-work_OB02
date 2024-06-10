@@ -48,4 +48,4 @@ user1.print_prm()
 admin1.print_name()
 admin1.print_prm()
 
-
+#print(admin1.name)
