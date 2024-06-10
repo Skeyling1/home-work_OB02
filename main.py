@@ -8,11 +8,13 @@ class User:
         self.__id = id
         self.__name = name
         self.__prm_deg = prm_deg
+
     def print_name(self):
         print(self.__name)
 
     def print_prm(self):
         print(self.__prm_deg)
+
 
 class Admin(User):
     def __init__(self, id, name, prm_deg = "admin"):
