@@ -9,10 +9,10 @@ class User:
         self.__name = name
         self.__prm_deg = prm_deg
 
-    def print_name(self):
+    def __print_name(self):
         print(self.__name)
 
-    def print_prm(self):
+    def __print_prm(self):
         print(self.__prm_deg)
 
 
@@ -42,9 +42,9 @@ admin1 = Admin(112, "Den")
 
 
 
-user1.print_name()
-admin1.print_name()
+user1.__print_name()
+admin1.__print_name()
 
-user2.print_prm()
-admin1.print_prm()
+user2.__print_prm()
+admin1.__print_prm()
 
