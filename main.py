@@ -8,17 +8,17 @@ class User:
         self.__id = id
         self.__name = name
         self.__prm_deg = prm_deg
-
-    def __print_name(self):
+    def print_name(self):
         print(self.__name)
 
-    def __print_prm(self):
+    def print_prm(self):
         print(self.__prm_deg)
-
 
 class Admin(User):
     def __init__(self, id, name, prm_deg = "admin"):
         super().__init__(id, name, prm_deg)
+
+
 
     def add_user(self):
         pass
@@ -42,9 +42,10 @@ admin1 = Admin(112, "Den")
 
 
 
-user1.__print_name()
-admin1.__print_name()
+user1.print_name()
+user1.print_prm()
 
-user2.__print_prm()
-admin1.__print_prm()
+admin1.print_name()
+admin1.print_prm()
+
 
