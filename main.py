@@ -9,17 +9,21 @@ class User:
         self.__name = name
         self.__prm_deg = prm_deg
 
-    def print_name(self):
-        print(self.__name)
+    def get_id(self):
+        return self.__id
 
-    def print_prm(self):
-        print(self.__prm_deg)
+    def get_name(self):
+        return self.__name
+
+    def set_person(self, idi, name):
+        self.__id = idi
+        self.__name = name
+
 
 
 class Admin(User):
     def __init__(self, id, name, prm_deg = "admin"):
         super().__init__(id, name, prm_deg)
-
 
 
     def add_user(self):
@@ -36,18 +40,23 @@ class Admin(User):
     # Предоставь доступ к необходимым атрибутам через методы (например, get и set методы).
 
 
-empl_list = []
 
-user1 = User(111, "Nik")
+
+
 user2 = User(222, "Lisa")
 admin1 = Admin(112, "Den")
 
+empl_list = [user2, admin1]
 
+print(empl_list[0].get_id())
+print(empl_list[0].get_name())
+print(empl_list[1].get_id())
+print(empl_list[1].get_name())
 
-user1.print_name()
-user1.print_prm()
+#print(User(111, "Nik").name)
+#User(111, "Nik").print_prm()
 
-admin1.print_name()
-admin1.print_prm()
+#admin1.print_name()
+#admin1.print_prm()
 
 #print(admin1.name)
