@@ -15,6 +15,9 @@ class User:
     def get_name(self):
         return self.__name
 
+    def get_prm(self):
+        return self.__prm_deg
+
     def set_person(self, idi, name):
         self.__id = idi
         self.__name = name
@@ -26,8 +29,9 @@ class Admin(User):
         super().__init__(id, name, prm_deg)
 
 
-    def add_user(self):
-        pass
+    def add_user(self, id, name, prm_deg = "user"):
+        User(id, name, prm_deg)
+        return User(id, name, prm_deg)
 
     def remove_user(self):
         pass
@@ -46,12 +50,16 @@ class Admin(User):
 user2 = User(222, "Lisa")
 admin1 = Admin(112, "Den")
 
-empl_list = [user2, admin1]
+user3 = admin1.add_user(333, "Gizmo")
+
+empl_list = [user2, admin1, user3]
 
 print(empl_list[0].get_id())
 print(empl_list[0].get_name())
-print(empl_list[1].get_id())
-print(empl_list[1].get_name())
+print(empl_list[2].get_id())
+print(empl_list[2].get_name())
+print(empl_list[2].get_prm())
+
 
 #print(User(111, "Nik").name)
 #User(111, "Nik").print_prm()
