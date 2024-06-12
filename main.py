@@ -26,8 +26,8 @@ class Admin(User):
         return u
 
     def remove_user(self, empl_list_numb):
-        empl_list.remove(empl_list_numb)
-        return empl_list
+        empl_list.pop(empl_list_numb)
+
 
     def print_list(self):
         for i in range(len(empl_list)):
@@ -42,7 +42,14 @@ empl_list.append(admin1.add_user(222, "Ted"))
 empl_list.append(admin1.add_user(333, "Gizmo"))
 empl_list.append(admin1.add_user(444, "Kate"))
 
+print("")
 admin1.print_list()
+
+admin1.remove_user(0)
+
+print("")
+admin1.print_list()
+
 
 
 
