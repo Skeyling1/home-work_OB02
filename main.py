@@ -29,9 +29,10 @@ class Admin(User):
         empl_list.remove(empl_list_numb)
         return empl_list
 
-    def print_list(self, empl_list_numb):
-        t = empl_list[empl_list_numb].get_info()
-        print(t)
+    def print_list(self):
+        for i in range(len(empl_list)):
+            t = empl_list[i].get_info()
+            print(t)
 
 
 admin1 = Admin(111, "Den")
@@ -41,7 +42,8 @@ empl_list.append(admin1.add_user(222, "Ted"))
 empl_list.append(admin1.add_user(333, "Gizmo"))
 empl_list.append(admin1.add_user(444, "Kate"))
 
-admin1.print_list(2)
+admin1.print_list()
+
 
 
 
